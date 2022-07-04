@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        height: 800px;
+    }
+    
+    .container {
+        display: grid;
+        grid-template-areas: "navbar navbar navbar navbar" "section section section aside" "section2 section2 section3 aside" "footer footer footer footer";
+    }
+    
+    .navbar {
+        background-color: rgba(248, 100, 100, 0.409);
+        border: 2px solid black;
+        border-radius: 12px;
+        margin: 10px 0px;
+        grid-area: navbar;
+        /* position: sticky; */
+        top: 0;
+        left: 0;
+        box-sizing: border-box;
+    }
+    
+    .navbar ul {
+        display: flex;
+    }
+    
+    .navbar ul li {
+        list-style: none;
+        text-decoration: none;
+        margin: 9px;
+    }
+    
+    .box {
+        background-color: gray;
+        border: 2px solid black;
+        border-radius: 9px;
+        padding: 10px;
+        margin: 10px 0px;
+        grid-area: section;
+    }
+    
+    aside {
+        background-color: antiquewhite;
+        border-radius: 9px;
+        padding: 10px;
+        border: 2px solid black;
+        margin: 10px 5px;
+        grid-area: aside;
+    }
+    
+    .section2 {
+        background-color: rgb(42, 161, 165);
+        border-radius: 9px;
+        padding: 10px;
+        border: 2px solid black;
+        margin: 10px 5px;
+        grid-area: section2;
+    }
+    
+    .section3 {
+        background-color: burlywood;
+        border-radius: 9px;
+        padding: 10px;
+        border: 2px solid black;
+        margin: 10px 5px;
+        grid-area: section3;
+    }
+    /* .service {
+        border: 2px solid black;
+        width: 100%;
+        border-radius: 9px;
+        text-align: center;
+        background-color: rgb(135, 235, 158);
+    } */
+    
+    .footer {
+        grid-area: footer;
+        border: 2px solid black;
+        border-radius: 9px;
+        text-align: center;
+        background-color: skyblue;
+    }
+    
+    .lou {
+        height: 7000px;
+    }
+    
+    input[type='text'] {
+        float: right;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <center>
+                <h1> LATEST APPLE MART</h1>
+            </center>
+            <!-- <ul>
+                <li>Home</li>
+                <li>About us</li>
+                <li>Service</li>
+                <li>Help</li>
+            </ul> -->
+            <a href="#copyright">Copyright</a>
+            <input type="text" placeholder="Search here">
+        </nav>
+        <section class="box">
+            <center>
+                <h1>APPLE</h1>
+                <img src="apple.png" alt="">
+
+                <p>Trade in your smartphone for credit. With Apple Trade In, you can get credit towards a new iPhone when you trade in your eligible smartphone.4 It’s good for you and the planet.
+        </section>
+        <aside>
+            <center>
+                <h1> IPHONE 13 PRO MAX</h1>
+                <img src="13.jfif" alt=""></center>
+
+            <p>A dramatically more powerful camera system. A display so responsive, every interaction feels new again. The world’s fastest smartphone chip. Exceptional durability. And a huge leap in battery life.
+                </ex>
+            </p>
+        </aside>
+        <section class="section2">
+            <center>
+                <h1>IPHONE 12</h1>
+                <img src="12.jfif" alt="">
+            </center>
+
+            <p>Blast past fast. A super-powerful chip. An advanced dual‑camera system. A Ceramic Shield front that’s tougher than any smartphone glass. And a bright, beautiful OLED display. iPhone 12 has it all — in two great sizes.</p>
+
+        </section>
+        <section class="section3">
+            <center>
+                <h2>IPHONE 11</h2>
+                <img src="11.jfif" alt="">
+            </center>
+
+            <p>iPhone 11 does not include a power adapter or EarPods. Included in the box is a USB‑C to Lightning cable that supports fast charging and is compatible with USB‑C power adapters and computer ports. We encourage you to re‑use your current power
+                adapters and headphones that are compatible with this iPhone. But if you need any new Apple power adapters or headphones, they are available for purchase.</p>
+        </section>
+
+        <!-- <div id="service" class="service">
+
+            <h2>Service Stations</h2>
+
+
+            <p>
+                Apple Authorised Service Provider – iVenus, Sindhu Bhavan Road 1, Asian Square, Sindhu Bhavan Marg, Bodakdev, Ahmedabad, Gujarat – 380054 9712005317 servicemanager.sbr@ivenus.in Mon-Sat (10.00am–6.00pm) Apple Authorised Service Provider – iVenus, Maninagar
+                G-6, The Arena, Near Kankaria Gate No. 3, Maninagar, Ahmedabad, Gujarat – 380022 9712000997 servicemanager.man@ivenus.in Mon-Sat (10.00am–6.00pm) Apple Authorised Service Provider – iVenus, CG Road B212/1, 2nd Floor, CG Square Mall, CG
+                Road, Ahmedabad, Gujarat – 380009 07940037123
+            </p>
+        </div> -->
+        <div id="copyright" class="footer">
+
+            <p>
+                Copyright © 2022 Apple Inc. All rights reserved.
+
+            </p>
+        </div>
+        <div class="lou"></div>
+</body>
+
+</html>
