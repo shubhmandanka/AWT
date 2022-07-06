@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div id="d1">
+        hello
+</div>
+<hr>
+<input type="button" value="alert" onclick="alert('hello')"/> 
+
+<input type="button" value="confirm" onclick="confirm('okay')"/ > <br>
+<input type="button" value="prompt" onclick="prompt('okay')"/ ><br>
+<input type="button" value="internal" onclick="demointernalalert('okay')"/ > <br>
+<input type="button" value="promptint" onclick="demointernalalert('okay')"/ > <br>
+<input type="button" value="external" onclick="demoexternalalert('okay')"/ > <br>
+<input type="button" value="confirmext" onclick="demoexternalalert('okay')"/ > <br>
+<input type="button" value="promext" onclick="demoexternalalert('okay')"/ > <br>
+<input type="button" value="bg" onclick="bodyBGGREEN('okay')"/ > <br>
+<input type="button" value="bggrey" onclick="divbggrey('okay')"/ > <br>
+<input type="button" value="bgprompt" onclick="bodybgprompt('okay')"/ > <br>
+<input type="button" value="bgprompt1" onclick="divbgprompt('okay')"/ > <br>
+<input type="color" id="cp" onchange="bodybgcp"> <br>
+<input type="color" id="cp1" onchange="bodybgcp1"> <br>
+
+<script type="text/javascript">
+    function demointernalalert()
+    {
+        alert("internal alert");
+    }
+    function demoexternalalert(){
+        if(confirm("are u sure?"))
+        {
+            alert("internal alert");
+        }
+        else
+        {
+            alert("NO");
+        }
+    }
+
+    function div()
+    {
+     
+       document.body.style.backgroundcolor= document.getelementby("cp1").value;
+    }
+</script>
+<script src="" text="text/java"></script>
+</body>
+</html>
