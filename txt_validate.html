@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        small{
+            color:red;
+        }
+    </style>
+    <script>
+    var $FullNameRegEx=/^([a-zA-Z]{2,40})$/;
+    var $ContactRegEx=/^([0-9]{10})$/;
+    var $EmailRegEx=/^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,8}\b$/i;
+
+    $(document).ready(function(){
+            $("#firstname").blur(function(){
+                $("#Txtvalidation").empty();
+                if($(this).val()=="" || $(this).val()==null){
+                    $("#Txtvalidation").html("Name Required...!!!");
+                }
+                else{
+                    if(!$(this).val().match($FullNameRegEx)){
+                        $("#Txtvalidation").html("invalid input...!!");
+                    }
+                }
+            });
+            $("#firstname").keypress(function(e){
+                $("#Txtvalidation").empty();
+                var Flag=((e.which>=65 && e.which<=90) || (e.which>=97 && e.which<=121));
+                if(Flag==false){
+                    $("#Txtvalidation").html("invalid input...!!");
+                }
+                return Flag;
+            });
+            $("#contact").blur(function(){
+                $("#Contactvalidation").empty();
+                if($(this).val()=="" || $(this).val()==null){
+                    $("#Contactvalidation").html("Number Required...!!!");
+                }
+                else{
+                    if(!$(this).val().match($ContactRegEx)){
+                        $("#Contactvalidation").html("invalid input...!!");
+                    }
+                }
+            });
+            $("#contact").keypress(function(e){
+                $("#Contactvalidation").empty();
+                var Flag=(e.which>=48 && e.which<=57);
+                if(Flag==false){
+                    $("#Contactvalidation").html("invalid input...!!");
+                }
+                return Flag;
+            });
+            $("#email").blur(function(){
+                $("#Emailvalidation").empty();
+                if($(this).val()=="" || $(this).val()==null){
+                    $("#Emailvalidation").html("Email ID Required...!!!");
+                }
+                else{
+                    if(!$(this).val().match($EmailRegEx)){
+                        $("#Emailvalidation").html("invalid input...!!");
+                    }
+                }
+            });
+            $("#btnsub").click(function(){
+                alert("Form Submitted Successfully");
+            });
+
+    });
+    </script>
+</head>
+<body>
+    <h1>Form</h1>
+    <div>
+        <input type="text" name="text1" id="firstname" placeholder="your first name"><br>
+        <small id="Txtvalidation"></small>
+    </div>
+    <br>
+    <div>
+        <input type="text" name="text2" id="contact" placeholder="contact no."><br>
+        <small id="Contactvalidation"></small>
+    </div>
+    <br>
+    <div>
+        <input type="text" name="text3" id="email" placeholder="your emailid"><br>
+        <small id="Emailvalidation"></small>
+    </div>
+    <br>
+    <input type="submit" value="submit" id="btnsub">
+</body>
+</html>
