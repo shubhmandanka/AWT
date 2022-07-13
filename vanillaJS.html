@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+    <script>
+        function internalAlert(){
+            alert("Internal Alert");
+        }
+        function internalConfirm(){
+            if(confirm("Are You Sure...")){
+                alert("YES")
+            }
+            else{
+                alert("NO")
+            }
+        }
+        function internalPrompt(){
+            var fn=prompt("enter first name")
+            var ln=prompt("enter last name")
+            alert(fn+"  "+ln)
+        }
+    </script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div>Hello Student!</div>
+    <br>
+    <div>
+        <input type="button" value="Inline Alert" onclick="alert('hello')" style="background-color:pink; border-color: brown;">&nbsp;&nbsp;
+        <input type="button" value="Inline Confirm" onclick="confirm('Are You Sure?')" style="background-color:pink; border-color: brown;">&nbsp;&nbsp;
+        <input type="button" value="Inline Prompt" onclick="prompt('Enter Your Name...')"style="background-color:pink; border-color: brown;">&nbsp;&nbsp;
+    </div>
+    <br>
+    <div>
+        <input type="button" value="Internal Alert" onclick="internalAlert()" style="background-color:pink; border-color: brown;">&nbsp;&nbsp;
+        <input type="button" value="Internal Confirm" onclick="internalConfirm()" style="background-color:pink; border-color: brown;">&nbsp;&nbsp;
+        <input type="button" value="Internal Prompt" onclick="internalPrompt()" style="background-color:pink; border-color: brown;">&nbsp;&nbsp;
+    </div>
+    <br>
+    <div>
+        <input type="button" value="External Alert" onclick="externalAlert()" style="background-color:pink; border-color: brown;">&nbsp;&nbsp;
+        <input type="button" value="External Confirm" onclick="externalConfirm()" style="background-color:pink; border-color: brown;">&nbsp;&nbsp;
+        <input type="button" value="External Prompt" onclick="externalPrompt()" style="background-color:pink; border-color: brown;">&nbsp;&nbsp;
+    </div>
+</body>
+</html>
